@@ -86,6 +86,7 @@
 		16AC366C2532D5DA003D2ED1 /* Moonlight!.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Moonlight!.mp3"; sourceTree = "<group>"; };
 		16AC366D2532D5DA003D2ED1 /* tranquility.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tranquility.mp3; sourceTree = "<group>"; };
 		16AC366E2532D5DA003D2ED1 /* memories (listen on spotify from 3am ep).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "memories (listen on spotify from 3am ep).mp3"; sourceTree = "<group>"; };
+		16D2A77125332D740047F649 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +129,7 @@
 				16AC36252532D25B003D2ED1 /* Assets.xcassets */,
 				16AC36272532D25B003D2ED1 /* LaunchScreen.storyboard */,
 				16AC362A2532D25B003D2ED1 /* Info.plist */,
+				16D2A77125332D740047F649 /* README.md */,
 			);
 			path = AppleMusicst;
 			sourceTree = "<group>";
