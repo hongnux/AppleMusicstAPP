@@ -4,3 +4,6 @@
 2) 앱 구동시, 오늘의 추천 음악을 Header에 띄우고, 다른 음악의 정보를 CollectionView 로 띄움
 3) 앨범 클릭시 PlayerView 화면 전환
 4) PlayerView 화면에서 재생,정지 를 수행하고 Seek 밑 Slider 를 이동하여 음악지점 이동
+5) IOS 13 이상 버전에서의 DarkMode 대응
+
+* 앱 구동은 [ AppRun.mov ] 동영상을 확인하면 됩니다.
