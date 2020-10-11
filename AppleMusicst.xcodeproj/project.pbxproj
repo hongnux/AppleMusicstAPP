@@ -103,6 +103,7 @@
 		16AC36102532D25A003D2ED1 = {
 			isa = PBXGroup;
 			children = (
+				16D2A77125332D740047F649 /* README.md */,
 				16AC361B2532D25A003D2ED1 /* AppleMusicst */,
 				16AC361A2532D25A003D2ED1 /* Products */,
 			);
@@ -129,7 +130,6 @@
 				16AC36252532D25B003D2ED1 /* Assets.xcassets */,
 				16AC36272532D25B003D2ED1 /* LaunchScreen.storyboard */,
 				16AC362A2532D25B003D2ED1 /* Info.plist */,
-				16D2A77125332D740047F649 /* README.md */,
 			);
 			path = AppleMusicst;
 			sourceTree = "<group>";
