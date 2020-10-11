@@ -1,7 +1,100 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6fT-H2-QJA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="bch-U9-hO3">
+            <objects>
+                <viewController id="6fT-H2-QJA" customClass="HomeViewController" customModule="AppleMusicst" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="axz-Zw-N1B">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kBU-et-BeM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jr1-9o-dzc">
+                                    <size key="itemSize" width="180" height="240"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="20" minY="20" maxX="20" maxY="20"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TrackCollectionViewCell" id="bA1-7H-RAh" customClass="TrackCollecionViewCell" customModule="AppleMusicst" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="20" width="180" height="240"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9Is-18-iUK">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="240"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1aB-Zi-N8w">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="1aB-Zi-N8w" secondAttribute="height" multiplier="1:1" id="03j-qv-gcj"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45w-vC-CNv">
+                                                    <rect key="frame" x="0.0" y="184" width="180" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80X-WP-F0A">
+                                                    <rect key="frame" x="0.0" y="206" width="40" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1aB-Zi-N8w" firstAttribute="leading" secondItem="9Is-18-iUK" secondAttribute="leading" id="Fm6-hN-rhc"/>
+                                                <constraint firstItem="80X-WP-F0A" firstAttribute="leading" secondItem="9Is-18-iUK" secondAttribute="leading" id="Fp8-eZ-NQ9"/>
+                                                <constraint firstAttribute="trailing" secondItem="45w-vC-CNv" secondAttribute="trailing" id="Uby-Pd-G5V"/>
+                                                <constraint firstItem="80X-WP-F0A" firstAttribute="top" secondItem="45w-vC-CNv" secondAttribute="bottom" id="Unx-9b-Mmq"/>
+                                                <constraint firstItem="45w-vC-CNv" firstAttribute="leading" secondItem="9Is-18-iUK" secondAttribute="leading" id="bJW-H5-bu7"/>
+                                                <constraint firstItem="1aB-Zi-N8w" firstAttribute="top" secondItem="9Is-18-iUK" secondAttribute="top" id="fFk-H2-hK3"/>
+                                                <constraint firstAttribute="trailing" secondItem="1aB-Zi-N8w" secondAttribute="trailing" id="im8-Eh-hjk"/>
+                                                <constraint firstItem="45w-vC-CNv" firstAttribute="top" secondItem="1aB-Zi-N8w" secondAttribute="bottom" constant="4" id="lIs-uF-rrm"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="trackArtist" destination="80X-WP-F0A" id="8ES-7y-VE7"/>
+                                            <outlet property="trackThumbnail" destination="1aB-Zi-N8w" id="jki-em-ZeZ"/>
+                                            <outlet property="trackTitle" destination="45w-vC-CNv" id="rHh-kG-Fug"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="6fT-H2-QJA" id="bBt-MN-k7Q"/>
+                                    <outlet property="delegate" destination="6fT-H2-QJA" id="pVA-70-KPk"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NQZ-7a-lsE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kBU-et-BeM" firstAttribute="top" secondItem="NQZ-7a-lsE" secondAttribute="top" id="M1p-xw-s38"/>
+                            <constraint firstItem="kBU-et-BeM" firstAttribute="leading" secondItem="NQZ-7a-lsE" secondAttribute="leading" id="Vyt-E4-Ze2"/>
+                            <constraint firstItem="NQZ-7a-lsE" firstAttribute="trailing" secondItem="kBU-et-BeM" secondAttribute="trailing" id="q0p-YK-fVW"/>
+                            <constraint firstItem="NQZ-7a-lsE" firstAttribute="bottom" secondItem="kBU-et-BeM" secondAttribute="bottom" id="x3t-1b-di3"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qTg-2e-MyS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-481.15942028985512" y="32.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

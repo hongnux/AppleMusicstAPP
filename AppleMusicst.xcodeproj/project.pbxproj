@@ -120,9 +120,9 @@
 			children = (
 				16AC36312532D286003D2ED1 /* Home */,
 				16AC36402532D341003D2ED1 /* Player */,
-				16AC364A2532D3B4003D2ED1 /* Resource */,
 				16AC364B2532D482003D2ED1 /* Style */,
 				16AC364F2532D4AC003D2ED1 /* Track */,
+				16AC364A2532D3B4003D2ED1 /* Resource */,
 				16AC361C2532D25A003D2ED1 /* AppDelegate.swift */,
 				16AC361E2532D25A003D2ED1 /* SceneDelegate.swift */,
 				16AC36252532D25B003D2ED1 /* Assets.xcassets */,
@@ -135,10 +135,10 @@
 		16AC36312532D286003D2ED1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				16AC36322532D2AD003D2ED1 /* TrackCollectionHeaderView.swift */,
-				16AC36352532D2E8003D2ED1 /* HomeViewController.swift */,
-				16AC36382532D300003D2ED1 /* TrackCollectionViewCell.swift */,
 				16AC363B2532D327003D2ED1 /* Main.storyboard */,
+				16AC36352532D2E8003D2ED1 /* HomeViewController.swift */,
+				16AC36322532D2AD003D2ED1 /* TrackCollectionHeaderView.swift */,
+				16AC36382532D300003D2ED1 /* TrackCollectionViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
