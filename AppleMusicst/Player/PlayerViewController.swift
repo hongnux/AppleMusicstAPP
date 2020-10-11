@@ -19,13 +19,14 @@ class PlayerViewController: UIViewController {
     @IBOutlet weak var totalDurationLabel: UILabel!
     
     //TODO: SimplePlayer 만들고 프로퍼티 추가
+    let simplePlayer = SimplePlayer.shared
     
     var timeObserver: Any?
     var isSeeking: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         updatePlayButton()
         updateTime(time: CMTime.zero)
         // TODO: TimeObserver 구현
@@ -57,7 +58,11 @@ class PlayerViewController: UIViewController {
     
     @IBAction func togglePlayButton(_ sender: UIButton) {
         // TODO: 플레이버튼 토글 구현
-        
+        if simplePlayer.isPlaying {
+            simplePlayer.pause()
+        } else{
+            simplePlayer.play()
+        }
         updatePlayButton()
     }
 }
@@ -65,6 +70,10 @@ class PlayerViewController: UIViewController {
 extension PlayerViewController {
     func updateTrackInfo() {
         // TODO: 트랙 정보 업데이트
+        guard let track = simplePlayer.currentItem?.convertToTrack() else { return }
+        thumbnailImageView.image = track.artwork
+        titleLabel.text = track.title
+        artistLabel.text = track.artist
         
     }
     
@@ -98,5 +107,13 @@ extension PlayerViewController {
     
     func updatePlayButton() {
         // TODO: 플레이버튼 업데이트 UI작업 > 재생/멈춤
+        let configuration = UIImage.SymbolConfiguration(pointSize: 40)
+        if simplePlayer.isPlaying {
+            let image = UIImage(systemName: "pause.fill", withConfiguration: configuration)
+            playControlButton.setImage(image, for: .normal)
+        } else {
+            let image = UIImage(systemName: "play.fill", withConfiguration: configuration)
+            playControlButton.setImage(image, for: .normal)
+        }
     }
 }

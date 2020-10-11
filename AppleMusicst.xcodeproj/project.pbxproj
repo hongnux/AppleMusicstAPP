@@ -147,8 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				16AC36412532D362003D2ED1 /* Player.storyboard */,
-				16AC36442532D376003D2ED1 /* PlayerViewController.swift */,
 				16AC36472532D393003D2ED1 /* SimplePlayer.swift */,
+				16AC36442532D376003D2ED1 /* PlayerViewController.swift */,
 			);
 			path = Player;
 			sourceTree = "<group>";
